@@ -10,7 +10,7 @@ def construct_prompt(query, action):
     elif "query_rewriting" in action:
         action_question.append("Why is question rewriting helpful for solving this question?")
     if "chain of thought" in action or "CoT" in action:
-        action_question.append("Why is using chain of thought (CoT) easier to make mistake than using programming for this question?")
+        action_question.append("Why is using natural language easier to solve this question, and using programming can make a mistake?")
     elif "programming_solver" in action:
         action_question.append("Why is using programming is easier than using natural language for solving this question?")
     if 'verifier' in action:
@@ -52,7 +52,7 @@ Explanation: This problem involves solving the equation \( f(f(x)) = f(x) \) whe
 Query: 
 What is the value of $a$ for which $\\frac{{1}}{{\\text{{log}}_2a}} + \\frac{{1}}{{\\text{{log}}_3a}} + \\frac{{1}}{{\\text{{log}}_4a}} = 1$?
 Task Instruction: For the given question, explain following questions in one paragraph:
-Why using programming is worse than using natural language for this question?
+WWhy is using natural language easier to solve this question, and using programming can make a mistake?
 Explanation: This problem involves solving an equation with logarithms, which requires algebraic manipulation and understanding of logarithmic properties. Using a programming approach is not straightforward because it involves symbolic computation and solving equations analytically, which is more naturally handled through mathematical reasoning rather than numerical computation. Chain of thought (CoT) is appropriate here as it allows for step-by-step reasoning to simplify and solve the equation. By breaking down the problem into smaller parts, we can systematically apply logarithmic identities and algebraic techniques to find the value of \(a\). This approach ensures a clear understanding of the solution process and the mathematical principles involved.
 
 Query:
